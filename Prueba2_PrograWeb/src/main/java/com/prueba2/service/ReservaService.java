@@ -8,13 +8,18 @@ import com.prueba2.entity.Reservas;
 import com.prueba2.repository.ReservasRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Alejandro
  */
+
+//el implements implementa todos los metodos de la clase que estamos llamando
+
+@Service
 public class ReservaService implements IReservaService{
-        @Autowired
+        @Autowired   // Es para unir ambos objetos/instancias. Ese autowired crea el puente entre el Repository y el Service
     private ReservasRepository reservaRepository;
 
     @Override

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 public interface IClienteService {
     public List<Cliente> getAllCliente();
     public Cliente getClienteById (int id);
-    public Cliente findByApellido(String apellido); //findbyapellido
+    public Cliente findByApellido(String apellido); // Encuentra por el apellido del cliente
     public void saveCliente(Cliente cliente);
     public void delete (int id);
     public Cliente findByNombre(String username);

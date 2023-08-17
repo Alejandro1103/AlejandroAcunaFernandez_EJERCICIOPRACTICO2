@@ -15,18 +15,22 @@ import jakarta.persistence.Table;
  * @author Alejandro
  */
 
-@Entity
+@Entity // Se crean las entidades
 @Table(name="reserva")
 public class Reservas {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
+    // Se crean las variables de acuerdo a la BD 
+    
     private int id;
     private int id_vuelo;
     private int id_cliente;
     private String fecha_reserva;
 
+     //Se crean los Getters y Setter para poder utilizarlos en otras clases.
+    
     public int getId() {
         return id;
     }

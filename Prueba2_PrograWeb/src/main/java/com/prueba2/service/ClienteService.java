@@ -8,13 +8,18 @@ import com.prueba2.entity.Cliente;
 import com.prueba2.repository.ClienteRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Alejandro
  */
+
+//el implements implementa todos los metodos de la clase que estamos llamando
+
+@Service
 public class ClienteService implements IClienteService{
-    @Autowired
+    @Autowired  // Es para unir ambos objetos/instancias. Ese autowired crea el puente entre el Repository y el Service
     private ClienteRepository clienteRepository;
 
     @Override
@@ -44,6 +49,11 @@ public class ClienteService implements IClienteService{
 
     @Override
     public Cliente findByNombre(String username) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Cliente> getAllClientes() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

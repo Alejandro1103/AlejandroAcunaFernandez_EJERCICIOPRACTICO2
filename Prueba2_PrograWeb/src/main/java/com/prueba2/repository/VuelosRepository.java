@@ -17,5 +17,5 @@ import org.springframework.stereotype.Repository;
 
 public interface VuelosRepository extends CrudRepository<Vuelos,Long>{
     public List<Vuelos> getAllVuelos();
-    public Vuelos getVueloById (int id);
+    public Vuelos getVueloById (int id); // Encuentra los vuelos por id
 }

@@ -16,13 +16,13 @@ import java.io.Serializable;
  * @author Alejandro
  */
 
-@Entity
+@Entity // Se crean las entidades
 @Table(name="cliente")
 public class Cliente implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+    // Se crean las variables de acuerdo a la BD 
     private int id;
     private String nombre;
     private String apellido;
@@ -31,7 +31,8 @@ public class Cliente implements Serializable{
     private String nombre_usuario;
     private String contrasena;
     private int id_rol;
-
+    
+    //Se crean los Getters y Setter para poder utilizarlos en otras clases.
     public int getId() {
         return id;
     }

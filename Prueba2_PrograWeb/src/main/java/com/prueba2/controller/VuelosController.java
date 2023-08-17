@@ -5,6 +5,7 @@
 package com.prueba2.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
@@ -12,5 +13,8 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class VuelosController {
-    
+    @GetMapping("/home")
+    public String index(){
+        return "/home";
+    }
 }
